@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--a:#d9561d;--a-d:#b44314;--soft:#f1efec;--bg:#f8f7f5;--ink:#1b1d21;--muted:#5c6068;--line:#e2dfda;--hi:#f0a030;--strip-t:#fde0cf}
+:root{--a:#b84919;--a-d:#b44314;--soft:#f1efec;--bg:#f8f7f5;--ink:#1b1d21;--muted:#5c6068;--line:#e2dfda;--hi:#f0a030;--strip-t:#feeade;--star:#bb7d25;--hi-d:#fcecd6;--hi-p:#f0a030;--field:#918f8c}
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{margin:0;font:17px/1.65 Inter,system-ui,sans-serif;color:var(--ink);background:var(--bg)}
@@ -22,7 +22,7 @@ img{max-width:100%;display:block}
 .btn-a:hover{background:var(--a-d)}
 .btn-line{border-color:var(--a);color:var(--a)}
 .btn-line:hover{background:var(--a);color:#fff}
-.stars{color:var(--hi);letter-spacing:2px}
+.stars{color:var(--star);letter-spacing:2px}
 header{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
 header .wrap{display:flex;align-items:center;gap:24px;height:74px}
 .brand{text-decoration:none;color:var(--ink);line-height:1}
@@ -82,7 +82,7 @@ form{background:var(--bg);border:1px solid var(--line);border-radius:20px;paddin
 form h3{font-size:32px;margin-bottom:4px}
 form .row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 label{display:block;font-weight:500;font-size:15px;margin-top:14px}
-input,select,textarea{width:100%;margin-top:5px;padding:12px 14px;font:inherit;border:1px solid var(--line);border-radius:10px;background:#fff;color:var(--ink)}
+input,select,textarea{width:100%;margin-top:5px;padding:12px 14px;font:inherit;border:1px solid var(--field);border-radius:10px;background:#fff;color:var(--ink)}
 input:focus,select:focus,textarea:focus{outline:2px solid var(--a);border-color:var(--a)}
 textarea{min-height:96px;resize:vertical}
 form .btn{width:100%;margin-top:22px}
@@ -98,14 +98,14 @@ form .btn{width:100%;margin-top:22px}
 .num{display:none}
 .head-dark header{background:var(--ink);border-color:transparent}
 .head-dark header nav a,.head-dark .brand b{color:#fff}
-.head-dark .brand small{color:rgba(255,255,255,.6)}
+.head-dark .brand small{color:rgba(255,255,255,.75)}
 .hero-full .hero{position:relative;isolation:isolate}
 .hero-full .hero .wrap{grid-template-columns:1fr;min-height:78vh;padding-top:110px;padding-bottom:110px}
 .hero-full .hero figure{position:absolute;inset:0;z-index:-1;max-width:none}
 .hero-full .hero figure img{height:100%;aspect-ratio:auto;border-radius:0}
-.hero-full .hero figure::before{inset:0;border:0;border-radius:0;background:linear-gradient(90deg,rgba(0,0,0,.8),rgba(0,0,0,.3));z-index:1}
+.hero-full .hero figure::before{inset:0;border:0;border-radius:0;background:linear-gradient(90deg,rgba(0,0,0,.85),rgba(0,0,0,.65));z-index:1}
 .hero-full .hero h1{color:#fff;max-width:720px}
-.hero-full .hero h1 em{color:var(--hi)}
+.hero-full .hero h1 em,.hero-full .eyebrow .stars{color:var(--hi-p)}
 .hero-full .hero p,.hero-full .eyebrow{color:rgba(255,255,255,.88)}
 .hero-full .btn-line{border-color:#fff;color:#fff}
 .hero-center .hero .wrap{grid-template-columns:1fr;text-align:center;gap:48px}
@@ -117,18 +117,18 @@ form .btn{width:100%;margin-top:22px}
 .svc-list .grid{grid-template-columns:1fr 1fr;gap:0 48px}
 .svc-list .card{display:flex;gap:20px;background:none;border:0;border-top:1px solid var(--line);border-radius:0;padding:28px 0;text-align:left}
 .svc-list .card svg{margin:4px 0 0;flex:none}
-.svc-list .num{display:block;font-weight:700;color:var(--hi);letter-spacing:.1em;margin-bottom:4px}
+.svc-list .num{display:block;font-weight:700;color:var(--a);letter-spacing:.1em;margin-bottom:4px}
 .svc-tiles #services{background:var(--ink)}
 .svc-tiles #services h2,.svc-tiles .card h3{color:#fff}
 .svc-tiles #services .lede,.svc-tiles .card p{color:rgba(255,255,255,.72)}
-.svc-tiles #services .kicker,.svc-tiles .card svg{color:var(--hi)}
+.svc-tiles #services .kicker,.svc-tiles .card svg{color:var(--hi-d)}
 .svc-tiles .card{background:rgba(255,255,255,.05);border-color:rgba(255,255,255,.12);text-align:left}
 .svc-tiles .card svg{margin:0 0 14px}
 .rev-feature .rgrid{grid-template-columns:1.4fr 1fr}
 .rev-feature blockquote:first-child{grid-row:span 2;background:var(--a);color:#fff;border:0;justify-content:center;padding:44px}
 .rev-feature blockquote:first-child p{font:700 28px/1.35 Oswald,serif}
-.rev-feature blockquote:first-child small{color:rgba(255,255,255,.75)}
-.rev-feature blockquote:first-child .stars{color:var(--hi)}
+.rev-feature blockquote:first-child small{color:var(--strip-t)}
+.rev-feature blockquote:first-child .stars{color:var(--hi-d)}
 .about-single .photos{grid-template-columns:1fr}
 .about-single .photos img:first-child{aspect-ratio:4/5}
 .about-single .photos img:last-child{display:none}
@@ -169,7 +169,7 @@ form .btn{width:100%;margin-top:22px}
 <main id="top">
   <div class="hero"><div class="wrap">
     <div>
-      <div class="eyebrow"><span class="stars">★★★★★</span> 4.5 on Google · Ottawa St N, Hamilton</div>
+      <div class="eyebrow"><span class="stars" aria-hidden="true">★★★★★</span> 4.5 on Google · Ottawa St N, Hamilton</div>
       <h1>Honest repairs, <em>done right.</em></h1>
       <p>A friendly neighbourhood garage that gets to your car quickly, explains the work, and treats you fairly.</p>
       <div class="ctas"><a class="btn btn-a" href="#book">Book a repair</a><a class="btn btn-line" href="tel:+19055480283">Call (905) 548-0283</a></div>
@@ -196,11 +196,11 @@ form .btn{width:100%;margin-top:22px}
   </div></section>
   <section id="reviews" class="center"><div class="wrap">
     <div class="kicker">Reviews</div><h2>What drivers say</h2>
-    <div class="gbadge"><span class="stars">★★★★★</span> 4.5 average on Google</div>
+    <div class="gbadge"><span class="stars" aria-hidden="true">★★★★★</span> 4.5 average on Google</div>
     <div class="rgrid">
-        <blockquote><span class="stars">★★★★★</span><p>“Been driving for 25 years. I've used many mechanics and have been a backyard mechanic at times. This place is an honest shop with a warm smile.”</p><footer>Adam A.<small>Google review</small></footer></blockquote>
-        <blockquote><span class="stars">★★★★★</span><p>“I've taken my car here many times and have found them to be friendly, reliable and trustworthy. I'll be back when I need more work done on my car.”</p><footer>Rebecca B.<small>Google review</small></footer></blockquote>
-        <blockquote><span class="stars">★★★★★</span><p>“They were very professional, and got to my car immediately! I'm very happy with their work and would recommend them to everyone!”</p><footer>Helena E.<small>Google review</small></footer></blockquote>
+        <blockquote><span class="stars" aria-hidden="true">★★★★★</span><p>“Been driving for 25 years. I've used many mechanics and have been a backyard mechanic at times. This place is an honest shop with a warm smile.”</p><footer>Adam A.<small>Google review</small></footer></blockquote>
+        <blockquote><span class="stars" aria-hidden="true">★★★★★</span><p>“I've taken my car here many times and have found them to be friendly, reliable and trustworthy. I'll be back when I need more work done on my car.”</p><footer>Rebecca B.<small>Google review</small></footer></blockquote>
+        <blockquote><span class="stars" aria-hidden="true">★★★★★</span><p>“They were very professional, and got to my car immediately! I'm very happy with their work and would recommend them to everyone!”</p><footer>Helena E.<small>Google review</small></footer></blockquote>
     </div>
   </div></section>
   <section id="visit" class="visit"><div class="wrap cols">
